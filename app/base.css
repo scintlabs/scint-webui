@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --scrollbar-thumb-color: rgba(0, 0, 0, 0);
+    --scrollbar-thumb-hover-color: #ffffff74;
+    --scrollbar-track-color: rgba(0, 0, 0, 0);
+    --scrollbar-width: 8px;
+    --background-rgb: 30, 30, 30;
+    --background-start-rgb: 30, 30, 30;
+    --background-end-rgb: 30, 30, 30;
+    --background: #191919;
+    --border-base: #373737;
+}
+
+html {
+    background: var(--background);
+    font-size: 15px;
+}
+
+li.user {
+    color: #e3e2edd0;
+    font-weight: 300;
+}
+
+li.assistant {
+    font-weight: 400;
+    color: #e3e2edf0;
+}
+
+li.assistant,
+li.user {
+    margin-bottom: 1rem;
+}
+
+li.user,
+li.assistant {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+li.assistant p,
+li.user p {
+    margin-top: 0.15rem;
+    margin-bottom: 2rem;
+    line-height: 1.65;
+}
+
+li.assistant ul {
+    margin: 2rem 0;
+}
+
+pre {
+    margin: 1.5rem 0;
+    border-top: 1px solid #353537;
+    border-bottom: 1px solid #353537;
+    font-weight: 100;
+    padding: 1.25rem 0;
+    overflow-x: auto;
+}
+
+code {
+    font-family: "MonoLisa Variable", monospace;
+    font-weight: 100;
+    font-size: 0.875rem;
+    line-height: 0.525rem;
+}
+
+p > code {
+    font-size: 0.875rem;
+    font-weight: 100;
+    line-height: 0.525rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    border: 1px solid #404040;
+    background-color: #2d2d2d;
+    filter: drop-shadow(0 0 3px #00000030);
+    padding: 0.125rem 0.375rem;
+}
+
+section > div > ul > li.assistant > div:first-of-type {
+    background-image: url("/images/scint.png");
+    background-size: 120% 120%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section > div > ul > li.user > div:first-of-type {
+    background-image: url("/images/user.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+li.system {
+    display: none;
+}
